@@ -1,7 +1,7 @@
 (defproject hipstr "0.1.0-SNAPSHOT"
 
   :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :url "http://defn.win"
 
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [selmer "0.8.7"]
