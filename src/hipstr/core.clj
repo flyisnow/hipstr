@@ -61,3 +61,6 @@
 
 (defn -main [& args]
   (start-app args))
+
+(defn add1 [a b]
+  (+ a b))

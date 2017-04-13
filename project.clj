@@ -31,7 +31,9 @@
   :main hipstr.core
 
   :plugins [[lein-environ "1.0.0"]
-            [lein-ancient "0.6.5"]]
+            [lein-ancient "0.6.5"]
+            [cider/cider-nrepl "0.8.1"]
+           ]
   :profiles
   {:uberjar {:omit-source true
              :env {:production true}
