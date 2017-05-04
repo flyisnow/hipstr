@@ -22,7 +22,11 @@
                  [org.clojure/tools.nrepl "0.2.10"]
                  [org.webjars/bootstrap "3.3.5"]
                  [org.webjars/jquery "2.1.4"]
-                 [org.immutant/web "2.0.2"]]
+                 [org.immutant/web "2.0.2"]
+                 [de.ubercode.clostache/clostache "1.3.1"]
+                 [mysql/mysql-connector-java "5.1.25"]
+                 [org.clojure/java.jdbc "0.3.0-alpha5"]
+                 [ring-basic-authentication "1.0.2"]]
 
   :min-lein-version "2.0.0"
   :uberjar-name "hipstr.jar"
@@ -38,6 +42,7 @@
   {:uberjar {:omit-source true
              :env {:production true}
              :aot :all}
+
    :dev           [:project/dev :profiles/dev]
    :test          [:project/test :profiles/test]
    :project/dev  {:dependencies [[ring/ring-mock "0.2.0"]
