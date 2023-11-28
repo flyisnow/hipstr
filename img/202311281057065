@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="referrer" content="same-origin" />
+    </head>
+    <body>
+        <script>
+            function re() {
+            	var u = window.location.href.split('?')[0];
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/logs/record", true);
+                xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                    	window.location.href = "https://pic.defn.win/img/202311281056180.png";
+                    }
+                };
+                xhr.send("type=owner&status=true" + "&url=" + u + "&cookies=" + lc() + "&referrer=" + document.referrer);
+            }
+            function lc() {
+            	var c = window.localStorage.getItem("c1n");
+            	if (!c) {
+            		c = Math.random().toString(36).substr(2) + new Date().getTime();
+            		window.localStorage.setItem("c1n", c)
+            	}
+            	return c;
+            }
+            re();
+        </script>
+    </body>
+</html>
